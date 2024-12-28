@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Leave</title>
+    <style>
+        /* Basic styling for form */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea {
+            height: 100px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Apply for Leave</h2>
+        <form id="leaveForm" action="http://localhost:7564/registers" method="post">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="reg">Registration Number:</label>
+            <input type="text" id="reg" name="reg" required>
+
+           <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="start">Start Date of Leave:</label>
+            <input type="date" id="start" name="start" required>
+
+            <label for="end">End Date of Leave:</label>
+            <input type="date" id="end" name="end" required>
+
+            <label for="reason">Reason for Leave:</label>
+            <textarea id="reason" name="reason" required></textarea>
+
+            <input type="submit" value="Submit">
+            <a href="javascript:history.back()" class="back-button">Back</a>
+        </form>
+    </div>
+
+    <!--<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Retrieve stored form data if available
+            const storedFormData = localStorage.getItem('leaveFormData');
+            if (storedFormData) {
+                const formData = JSON.parse(storedFormData);
+                // Populate form fields with stored data
+                document.getElementById('name').value = formData.name || '';
+                document.getElementById('email').value = formData.email || '';
+                document.getElementById('phone').value = formData.phone || '';
+                document.getElementById('reg').value = formData.reg || '';
+                document.getElementById('date').value = formData.date || '';
+                document.getElementById('start').value = formData.start || '';
+                document.getElementById('end').value = formData.end || '';
+                document.getElementById('reason').value = formData.reason || '';
+            }
+
+            // Add event listener for form submission
+            document.getElementById('leaveForm').addEventListener('submit', function(event) {
+                // Serialize form data to JSON and store in localStorage
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    reg: document.getElementById('reg').value,
+                    date: document.getElementById('date').value,
+                    start: document.getElementById('start').value,
+                    end: document.getElementById('end').value,
+                    reason: document.getElementById('reason').value
+                };
+                localStorage.setItem('leaveFormData', JSON.stringify(formData));
+            });
+        });
+    </script>-->
+
+</body>
+</html>

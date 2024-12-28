@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Form</title>
+    <style>
+        /* Basic styling for form */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-container textarea {
+            resize: vertical;
+        }
+        .form-container button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Report an Issue</h2>
+<p>If you are facing any issues, please provide your details and describe the problem below:</p>
+<form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="cd05da48-d471-4b54-9fc2-3a145ac3a40e">
+   <!---- <input type="hidden" name="access_key" value="65d97e76-e2f6-4b60-96f5-3b85d65ed106">-->
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="text" name="room_number" placeholder="Block and Room Number" required>
+    <textarea name="problem" placeholder="Describe the problem you are facing" required></textarea>
+    <button type="submit">Submit</button>
+    <div class="back-button" style="text-align: center; margin-top: 20px;">
+        <a href="#" onclick="history.back()"
+           style="display: inline-block; padding: 12px 12px; background-color: #88c420; color: white; text-decoration: none; border-radius: 8px; font-size: 18px; transition: background-color 0.3s ease;">
+            Back
+        </a>
+    </div>
+</form>
+
+    </div>
+</body>
+</html>

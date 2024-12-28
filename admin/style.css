@@ -1,0 +1,59 @@
+
+body{
+    background: beige;
+}
+
+h1{
+    text-align: center;
+}
+.forms {
+    max-width: 400px;
+    margin: auto;
+    background: black;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 100px;
+}
+
+.signup-heading{
+    text-align: center;
+}
+
+.form-group {
+    margin-left: 100px;
+    margin-top: 20px;
+}
+input {
+    width: 228px;
+    height: 29px;
+    padding: 5px;
+}
+
+.logo{
+    width: 60px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+label{
+    display: block;
+    margin: 5px;
+    font-size: 16px;
+}
+
+button {
+    background: beige;
+    border: none;
+    color: #000;
+    padding: 6px 23px;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-group {
+    text-align: center;
+    margin-top: 20px;
+}

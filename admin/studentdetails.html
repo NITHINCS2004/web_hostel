@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    
+    <title></title>
+    <link rel="stylesheet" href="..\css\studentdashboard.css">
+
+    <script type="text/javascript">
+      function applyleave(){
+        window.location.href ="/project/requestleave.html";
+      }
+      function roomdetails(){
+        window.location.href ="/project/studentroomdetails.html";
+
+      }
+      function searchroommates(){
+        window.location.href ="roommatesearch.php";
+
+      }
+      function rtohome(){
+window.location.href ="studentdashboard.php";
+
+      }
+      function logout(){
+        window.location.href ="/project/index.php";
+
+      }
+      function logouts(){
+        window.location.href ="/project/index.php";
+
+      }
+   
+    </script>
+    
+  </head>
+  <body>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <div class="Nav" id="Nav1" style="display: flex; justify-content: space-between; align-items: center; background-color: #f0f0f0; padding: 10px;">
+    <div class="NavbarContainer">
+        <img src="https://www.addressguru.in/images/1299650455.png" alt="assam" class="NavLogo" onclick="rtohome()" style="cursor: pointer; height:80px;">
+    </div>
+    <!--<div class="NavBtn">
+        <button type="button" class="NavBtnLink" onClick="logouts()" style="background-color: #007bff; color: white; border: none; padding: 10px 20px; ">Back</button>
+    </div>-->
+    <!--<div class="NavBtn">
+      <a href="http://localhost/project/index.php" class="NavBtnLink" style="background-color: #007bff; color: white; border: none; padding: 10px 20px; text-decoration: none;">logout</a>
+  </div>-->
+  
+    <div class="NavBtn">
+        <button type="button" class="NavBtnLink" onclick="logout()" style="background-color: #dc3545; color: white; border: none; padding: 10px 20px; cursor: pointer;">Back</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="wrapper">
+
+   <div class="content">
+      <!-- card -->
+      <!--<div class="card" onclick="searchroommates()">
+
+            <div class="icon"><i class="material-icons md-36">search</i></div>
+            <p class="title">ROOM DETAILS</p>
+            <p class="text">Check all student room details</p>
+
+      </div>-->
+      <!-- end card -->
+      <!-- card -->
+     <div class="card" onclick="roomdetails()">
+
+            <div class="icon"><i class="material-icons md-36">description</i></div>
+            <p class="title">STUDENT SEARCH</p>
+            <p class="text">To search for student</p>
+
+      </div>
+      <!-- end card -->
+
+
+      <!-- card -->
+     <div class="card"  onclick="applyleave()">
+
+            <div class="icon"><i class="material-icons md-36">add</i></div>
+            <p class="title">LEAVE MANAGEMENT</p>
+<p class="text">Approve or Decline Requests</p>
+
+
+      </div>
+      <!-- end card -->
+
+   </div>
+
+</div>
+
+  </body>
+</html>

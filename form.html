@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hostel Management - Registration</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h2 {
+            color: #343a40;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 1px;
+            color: #495057;
+            font-weight: bold;
+            font-size: 14px; /* Increased font size for better visibility */
+        }
+
+        input[type="text"], input[type="email"], input[type="password"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .form-group {
+            margin-bottom: -5px;
+        }
+    </style>
+    <script>
+        // Dynamically set the form action to include the current port
+        window.onload = function() {
+            const port = window.location.port;
+            const form = document.getElementById('registration-form');
+            form.action = `http://localhost:8975/register`;
+        };
+    </script>
+</head>
+<body>
+    <form id="registration-form" method="post">
+        <h2>Registration Form</h2>
+        <div class="form-group">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="regno">Registration Number:</label>
+            <input type="text" id="regno" name="regno" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <input type="text" id="gender" name="gender" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="block">Block:</label>
+            <select id="block" name="block" required>
+                <option value="Q">Q</option>
+                <option value="M">M</option>
+                <option value="K">K</option>
+                <option value="F">F</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="room">Room:</label>
+            <select id="room" name="room" required>
+                <option value="1">Room 1</option>
+                <option value="2">Room 2</option>
+                <option value="3">Room 3</option>
+                <option value="4">Room 4</option>
+                <option value="5">Room 5</option>
+            </select>
+        </div>
+        
+        <input type="submit" value="Register">
+        <div class="back-button" style="text-align: center; margin-top: 20px;">
+            <a href="#" onclick="history.back()"
+               style="display: inline-block; padding: 15px 30px; background-color: #007bff; color: white; text-decoration: none; border-radius: 8px; font-size: 18px; transition: background-color 0.3s ease;">
+                Back
+            </a>
+        </div>
+    </form>
+</body>
+</html>
